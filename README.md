@@ -1,20 +1,36 @@
 # purescript-codegen
+All relevant code to reading and generating purescript. Also contains stuff related to typescript. This readme also links to repositories that do not fall under the organization but are still relevant to codegen.
 
-This is the notebook with links, materials and ideas of the purescript-codegen organization.
+## Purescript
 
-# Repository status
+### Parsing
+[language-cst-parser](https://github.com/natefaubion/purescript-language-cst-parser)
 
-* [purescript-codegen.github.io](https://github.com/purescript-codegen/purescript-codegen.github.io) - This website
-* [purescript-js-ast](https://github.com/purescript-codegen/purescript-ps-ast) - Mainly for inspiration, likely to be replaced with purescript-ps-ast. (11-5-2020)
-* [purescript-ps-ast](https://github.com/purescript-codegen/purescript-ps-ast) - Purescript in purescript, at the moment getting a port from the official haskell implementation of purescript. (11-5-2020)
-* [purescript-read-dts](https://github.com/purescript-codegen/purescript-read-dts) - Works reliably to extract a subset of typescript definitions. (11-5-2020)
-
-# Codegen examples
+### Printing
+[language-cst-parser](https://github.com/natefaubion/purescript-language-cst-parser) can also print. But [tidy-codegen](https://github.com/natefaubion/purescript-tidy-codegen) is recommended as it is more convenient to use (uses language-cst-parser under the hood)
 
 ## TypeScript
+
+### Purescript to DTS
+[tsd-gen](https://github.com/minoki/purescript-tsd-gen) (haskell)
+
+### DTS to Purescript
+[read-dts](https://github.com/purescript-codegen/purescript-read-dts) contains the following parts:
+
+* ts-compiler extensive bindings to the [typescript compiler](https://github.com/purescript-codegen/purescript-read-dts/tree/master/src/TypeScript/Compiler)
+* ts-repr is an intermediate representation (IR) that simplifies the types found in the typescript compiler. Currently only typescript types to ts-repr is possible. ts-repr back into typescript types is planned for the future.
+* ts-codegen convert ts-repr IR into purescript using various strategies. Purescript back into ts-repr might be added in the far future.
+
+### related projects to typescript codegen
+* [Typescript compiler API - using the type checker](https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API#using-the-type-checker)
+* Generate json-schema from your Typescript sources: [typescript-json-schema](https://github.com/YousefED/typescript-json-schema). This is useful to see how the typescript compiler works and which information can be extracted from it.
 * [auth0](https://auth0.github.io/auth0-spa-js/index.html) uses [typedoc](https://typedoc.org/) for docs generation.
 * TypeScript d.ts file generate from JSON Schema file: [dtsgenerator](https://github.com/horiuchi/dtsgenerator) and [ts-json-schema-generator](https://github.com/vega/ts-json-schema-generator).
-For more useful links see [purescript-read-dts](https://github.com/purescript-codegen/purescript-read-dts/blob/master/README.md#useful-links) at the bottom of the readme.
 
-# Related links
-* [purty](https://github.com/joneshf/purty) - purescript formatter written in haskell. This source code is especially useful because if it's prettyprinter of purescript code (which the purescript compiler written in haskell doesn't need)
+## old repositories
+* [ps-cst](https://github.com/purescript-codegen/purescript-ps-cst) good working repository with purescript parser and printer
+* [cst-simple](https://github.com/purescript-codegen/purescript-cst-simple) ??
+* [js-ast](https://github.com/purescript-codegen/purescript-js-ast) proof of concept
+* [ps-past](https://github.com/purescript-codegen/purescript-ps-past) extracted from purescript-in-purescript
+* [purescript-in-purescript](https://github.com/purescript/purescript-in-purescript) abandoned rewrite of purescript compiler in purescript making it self-hosting
+* [purty](https://github.com/joneshf/purty) - purescript formatter written in haskell. Abandoned since it didn't keep up with the later purescript features. Served as good inspiration for pretty printing purescript code. The official purescript compiler in haskell has only the parser part.
