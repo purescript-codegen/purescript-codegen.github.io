@@ -3,11 +3,12 @@ All relevant code to reading and generating purescript. Also contains stuff rela
 
 ## Purescript
 
+### Printing
+* [ps-cst](https://github.com/purescript-codegen/purescript-ps-cst) concrete syntax tree of purescript with printing functions
+* [language-cst-parser](https://github.com/natefaubion/purescript-language-cst-parser) can also print. But [tidy-codegen](https://github.com/natefaubion/purescript-tidy-codegen) is recommended as it is more convenient to use (uses language-cst-parser under the hood)
+
 ### Parsing
 [language-cst-parser](https://github.com/natefaubion/purescript-language-cst-parser)
-
-### Printing
-[language-cst-parser](https://github.com/natefaubion/purescript-language-cst-parser) can also print. But [tidy-codegen](https://github.com/natefaubion/purescript-tidy-codegen) is recommended as it is more convenient to use (uses language-cst-parser under the hood)
 
 ## TypeScript
 
@@ -28,7 +29,6 @@ All relevant code to reading and generating purescript. Also contains stuff rela
 * TypeScript d.ts file generate from JSON Schema file: [dtsgenerator](https://github.com/horiuchi/dtsgenerator) and [ts-json-schema-generator](https://github.com/vega/ts-json-schema-generator).
 
 ## old repositories
-* [ps-cst](https://github.com/purescript-codegen/purescript-ps-cst) good working repository with purescript parser and printer
 * [cst-simple](https://github.com/purescript-codegen/purescript-cst-simple) printer for ps-cst
 * [js-ast](https://github.com/purescript-codegen/purescript-js-ast) proof of concept
 * [ps-past](https://github.com/purescript-codegen/purescript-ps-past) extracted from purescript-in-purescript
