@@ -29,7 +29,7 @@ All relevant code to reading and generating purescript. Also contains stuff rela
 
 ## old repositories
 * [ps-cst](https://github.com/purescript-codegen/purescript-ps-cst) good working repository with purescript parser and printer
-* [cst-simple](https://github.com/purescript-codegen/purescript-cst-simple) ??
+* [cst-simple](https://github.com/purescript-codegen/purescript-cst-simple) printer for ps-cst
 * [js-ast](https://github.com/purescript-codegen/purescript-js-ast) proof of concept
 * [ps-past](https://github.com/purescript-codegen/purescript-ps-past) extracted from purescript-in-purescript
 * [purescript-in-purescript](https://github.com/purescript/purescript-in-purescript) abandoned rewrite of purescript compiler in purescript making it self-hosting
